@@ -2,11 +2,12 @@
 // @name         Hide GOG heroes
 // @description  Hide hero images from the redesigned GOG game pages. Puts the price box back in the old place. This changes should make the desktop browsing experience more pleasant.
 // @namespace    https://github.com/BattleMage
-// @homepage     https://github.com/BattleMage/gog-anti-hero
-// @version      0.1.1
+// @homepageURL  https://github.com/BattleMage/gog-anti-hero
+// @version      0.2
 // @author       BattleMage
 // @match        https://www.gog.com/game/*
 // @grant        GM_addStyle
+// @require      https://greasemonkey.github.io/gm4-polyfill/gm4-polyfill.js
 // ==/UserScript==
 
 (function() {
@@ -15,7 +16,7 @@
     GM_addStyle('.product-actions {position: relative; width: auto; right: auto;}');
     GM_addStyle('@media (min-width: 737px) { .productcard-basics {padding-top: 65px;} }');
 
-    let productPrice = document.getElementsByClassName('product-actions hide-when-content-is-expanded ng-scope')[0];
+    let productPrice = document.querySelector('div.product-actions.hide-when-content-is-expanded[product-actions]');
     let sideColumn = document.getElementsByClassName('layout-side-col')[0];
     let whyGog = sideColumn.getElementsByClassName('why-gog')[0];
     let summarySection = document.getElementsByClassName('layout-side-col')[0].getElementsByClassName('content-summary-section')[0];
