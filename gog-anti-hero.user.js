@@ -3,9 +3,10 @@
 // @description  Hide hero images from the redesigned GOG game pages. Puts the price box back in the old place. This changes should make the desktop browsing experience more pleasant.
 // @namespace    https://github.com/BattleMage
 // @homepageURL  https://github.com/BattleMage/gog-anti-hero
-// @version      0.2
+// @version      0.3
 // @author       BattleMage
 // @match        https://www.gog.com/game/*
+// @match        https://www.gog.com/*/game/*
 // @grant        GM_addStyle
 // @require      https://greasemonkey.github.io/gm4-polyfill/gm4-polyfill.js
 // ==/UserScript==
